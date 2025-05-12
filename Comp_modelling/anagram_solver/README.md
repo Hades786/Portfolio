@@ -1,73 +1,96 @@
 # Anagram Frequency Distribution Analysis
 
-This project explores statistical behaviors that emerge from solving anagram puzzles generated from all 9-letter combinations of the English alphabet. The frequency of valid solutions is analyzed and visualized, revealing stretched Gaussian and exponential-tail behavior — a phenomenon common in both physical and economic systems.
+## Project
+This Python project analyzes how many valid English words can be formed from every 9-letter anagram generated from the English alphabet. It filters words based on dictionary membership, letter inclusion, and word length constraints.
 
-## Repository Structure
+The distribution of solution counts per anagram reveals interesting statistical behavior — including stretched Gaussian and exponential-like tails — patterns that also appear in physical and economic systems.
 
-```
-Comp_modelling/
-└── anagram_solver/
-    ├── combinations.py              # Generates ~3.1 million 9-letter anagram puzzles
-    ├── anagram_solver_binary_v3.py # Solves each anagram under dictionary constraints
-    ├── histogram_function.py       # Plots frequency distribution of solutions
-    ├── dictionary.txt              # (not uploaded; user-supplied)
-    ├── solutions.txt               # Output of anagram vs solution count (optional)
-    ├── anagram_report.pdf          # Formal LaTeX report
-    └── fig1.pdf                    # Distribution graph
-```
+**Key features:**
+- Generates all possible 9-letter letter combinations
+- Solves anagrams using binary search + multiprocessing
+- Filters for central letter and word length (3–9 letters)
+- Visualizes the frequency distribution using Matplotlib
 
-## Features
+---
 
-- Generates all 9-letter combinations from the English alphabet  
-- Solves anagrams with constraints:  
-  - Must contain a central letter  
-  - Length between 3 to 9 letters  
-  - Must appear in dictionary  
-- Set filtering and binary search used for fast lookups  
-- Multiprocessing for improved speed  
-- Visualizes distribution using Matplotlib  
+## Prerequisites
+- Python 3.8 or higher
+- A text file containing a lowercase dictionary (e.g., `dictionary.txt`)
+- Required Python packages:
+  - `matplotlib`
 
-## Methodology
+---
 
-1. Generate all 9-letter anagram puzzles using combinations  
-2. Solve based on inclusion and dictionary validation  
-3. Count valid solutions per puzzle  
-4. Plot the resulting distribution of solution frequencies  
+## Setup
+Clone the repo and navigate to the project directory:
 
-## Requirements
+```bash
+git clone https://github.com/yourusername/Comp_modelling.git
+cd Comp_modelling/anagram_solver
+````
 
-- Python 3.8+  
-- matplotlib  
+Ensure `dictionary.txt` is present in the same directory.
 
-## Usage
+---
 
-**Generate Anagrams:**
+## Testing
+
+### 1. Generate Anagrams
+
+This step generates all possible 9-letter combinations:
+
 ```bash
 python combinations.py
 ```
 
-**Solve Anagrams:**
+### 2. Solve Anagrams
+
+This script filters and counts valid dictionary words per anagram:
+
 ```bash
 python anagram_solver_binary_v3.py
 ```
 
-**Visualize Results:**
+### 3. Visualize Results
+
+To generate a histogram of solution frequencies:
+
 ```bash
 python histogram_function.py
 ```
 
-> Make sure `dictionary.txt` is available in the same directory.
+---
 
-## Visualization
+## Documentation
 
+**Folder Structure:**
+
+```
+anagram_solver/
+├── combinations.py              # Generates ~3.1 million 9-letter anagram puzzles
+├── anagram_solver_binary_v3.py # Solves anagrams using constraints + binary search
+├── histogram_function.py       # Plots histogram of valid solution counts
+├── dictionary.txt              # Required (user-supplied)
+├── solutions.txt               # Optional: stores solution counts per anagram
+├── anagram_report.pdf          # Detailed LaTeX writeup (optional)
+└── fig1.pdf                    # Visualization of distribution
+```
+
+**Example Output:**
 ![PDF of Solutions](fig1.pdf)
+
+---
 
 ## Author
 
-Ahmed Raza Patel  
-Formal report available in `anagram_report.pdf`
+**Ahmed Raza Patel**
+For deeper analysis, see the LaTeX report in `anagram_report.pdf`.
+
+---
 
 ## License
 
-MIT (OS)
+MIT License
+
+```
 ```
