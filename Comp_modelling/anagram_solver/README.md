@@ -25,7 +25,7 @@ The distribution of solution counts per anagram reveals interesting statistical 
 Clone the repo and navigate to the project directory:
 
 ```bash
-git clone https://github.com/yourusername/Comp_modelling.git
+git clone https://github.com/Hades786/Portfolio/Comp_modelling.git
 cd Comp_modelling/anagram_solver
 ````
 
@@ -72,19 +72,11 @@ anagram_solver/
 ├── histogram_function.py       # Plots histogram of valid solution counts
 ├── dictionary.txt              # Required (user-supplied)
 ├── solutions.txt               # Optional: stores solution counts per anagram
-├── anagram_report.pdf          # Detailed LaTeX writeup (optional)
 └── fig1.pdf                    # Visualization of distribution
 ```
 
 **Example Output:**
 ![PDF of Solutions](fig1.pdf)
-
----
-
-## Author
-
-**Ahmed Raza Patel**
-For deeper analysis, see the LaTeX report in `anagram_report.pdf`.
 
 ---
 
