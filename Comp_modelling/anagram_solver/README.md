@@ -7,7 +7,7 @@ The distribution of solution counts per anagram reveals interesting statistical 
 
 **Key features:**
 - Generates all possible 9-letter letter combinations
-- Solves anagrams using binary search + multiprocessing
+- Solves anagrams using binary search
 - Filters for central letter and word length (3–9 letters)
 - Visualizes the frequency distribution using Matplotlib
 
